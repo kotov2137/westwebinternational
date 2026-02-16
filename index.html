@@ -1,4 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0f2d57" />
+  <title>West Web International — Professional Websites on Demand</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <meta name="description" content="West Web International builds professional websites for businesses worldwide. Corporate sites, e-commerce, landing pages, portals, SEO & support." />
+  <link rel="canonical" href="https://westwebinternational.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="West Web International" />
+  <meta property="og:title" content="West Web International — Professional Websites on Demand" />
+  <meta property="og:description" content="Professional websites for businesses worldwide. Corporate sites, e-commerce, landing pages, portals, SEO & support." />
+  <meta property="og:url" content="https://westwebinternational.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
+<body>
+  <!-- Background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__orb bg__orb--1"></div>
+    <div class="bg__orb bg__orb--2"></div>
+    <div class="bg__orb bg__orb--3"></div>
+    <div class="bg__lines"></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home" aria-label="West Web International">
+        <span class="brand__mark" aria-hidden="true">W</span>
+        <span class="brand__text">
+          <span class="brand__name">WEST WEB</span>
+          <span class="brand__sub">INTERNATIONAL</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" data-scroll href="#about">About</a>
+        <a class="nav__link" data-scroll href="#services">Services</a>
+        <a class="nav__link" data-scroll href="#work">Work</a>
+        <a class="nav__link" data-scroll href="#pricing">Pricing</a>
+        <a class="nav__link" data-scroll href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar__right">
+        <div class="lang" role="group" aria-label="Language">
+          <button class="lang__btn" type="button" data-lang="en">EN</button>
+          <button class="lang__btn" type="button" data-lang="pl">PL</button>
+          <button class="lang__btn" type="button" data-lang="ua">UA</button>
+        </div>
+        <a class="pill pill--ghost" href="tel:+48734036953" id="phoneLink" aria-label="Call">
+          <span class="pill__icon" aria-hidden="true">☎</span>
+          <span class="pill__text">+48734036953</span>
+        </a>
+        <button class="pill pill--solid" type="button" data-scroll-btn="#contact" id="ctaTop">
+          <span class="pill__text" data-i18n="cta_short">Get a quote</span>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobile" hidden>
+      <div class="container mobile__inner">
+        <a class="mobile__link" data-scroll href="#about">About</a>
+        <a class="mobile__link" data-scroll href="#services">Services</a>
+        <a class="mobile__link" data-scroll href="#work">Work</a>
+        <a class="mobile__link" data-scroll href="#pricing">Pricing</a>
+        <a class="mobile__link" data-scroll href="#contact">Contact</a>
+        <div class="mobile__row">
+          <span class="mobile__label" data-i18n="lang_label">Language</span>
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-lang="en">EN</button>
+            <button class="lang__btn" type="button" data-lang="pl">PL</button>
+            <button class="lang__btn" type="button" data-lang="ua">UA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="badge" data-i18n="badge">Web development • Design • SEO • Support</div>
+          <h1 class="hero__title" data-i18n="hero_title">Professional websites built to sell.</h1>
+          <p class="hero__lead" data-i18n="hero_lead">
+            We deliver fast, secure, and conversion-focused sites for businesses worldwide. Based in Poland — serving clients globally.
+          </p>
+
+          <div class="hero__actions">
+            <button class="btn btn--primary" type="button" data-scroll-btn="#contact" id="ctaHero">
+              <span data-i18n="cta_primary">Get a consultation</span>
+            </button>
+            <button class="btn btn--secondary" type="button" data-scroll-btn="#work" id="ctaWork">
+              <span data-i18n="cta_secondary">See our work</span>
+            </button>
+          </div>
+
+          <div class="hero__stats" aria-label="Highlights">
+            <div class="stat">
+              <div class="stat__value">48–96h</div>
+              <div class="stat__label" data-i18n="stat_1">First clickable prototype</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">90+</div>
+              <div class="stat__label" data-i18n="stat_2">Performance score targets</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">24/7</div>
+              <div class="stat__label" data-i18n="stat_3">Monitoring & support options</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__panel" aria-label="Quick request">
+          <div class="panel">
+            <h2 class="panel__title" data-i18n="panel_title">Quick request</h2>
+            <p class="panel__hint" data-i18n="panel_hint">Tell us what you need — we reply within 24 hours.</p>
+
+            <form id="quickForm" class="form">
+              <label class="field">
+                <span class="field__label" data-i18n="f_name">Name</span>
+                <input class="field__input" name="name" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span class="field__label" data-i18n="f_email">E-mail</span>
+                <input class="field__input" type="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span class="field__label" data-i18n="f_goal">Goal</span>
+                <select class="field__input" name="goal" required>
+                  <option value="" data-i18n="goal_pick">Pick one…</option>
+                  <option value="corporate" data-i18n="goal_1">Corporate website</option>
+                  <option value="ecommerce" data-i18n="goal_2">Online store</option>
+                  <option value="landing" data-i18n="goal_3">Landing page</option>
+                  <option value="portal" data-i18n="goal_4">Portal / system</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field__label" data-i18n="f_msg">Message</span>
+                <textarea class="field__input field__input--ta" name="message" rows="4" required></textarea>
+              </label>
+
+              <button class="btn btn--primary btn--block" type="submit">
+                <span data-i18n="send">Send</span>
+              </button>
+
+              <p class="form__fine" data-i18n="fine">
+                By sending this form, you agree to be contacted about your request. No spam.
+              </p>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Feature strip -->
+    <section class="strip" aria-label="What we build">
+      <div class="container strip__inner">
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">🏢</span>
+          <span class="chip__text" data-i18n="chip_1">Corporate websites</span>
+        </div>
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">🛒</span>
+          <span class="chip__text" data-i18n="chip_2">E-commerce</span>
+        </div>
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">📣</span>
+          <span class="chip__text" data-i18n="chip_3">Landing pages</span>
+        </div>
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">🧩</span>
+          <span class="chip__text" data-i18n="chip_4">Portals & integrations</span>
+        </div>
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">🔒</span>
+          <span class="chip__text" data-i18n="chip_5">Security & compliance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="about_title">About West Web International</h2>
+          <p class="sub" data-i18n="about_sub">
+            A global web studio with a Poland-based core. We build websites that look strict, feel premium, and work reliably.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3 class="h3" data-i18n="about_card1_title">What you get</h3>
+            <ul class="list">
+              <li data-i18n="about_b1">Clean, professional UI with strong information architecture</li>
+              <li data-i18n="about_b2">Fast loading, SEO-ready structure, and analytics setup</li>
+              <li data-i18n="about_b3">Mobile-first responsiveness and accessibility basics</li>
+              <li data-i18n="about_b4">Maintainable code & documentation for future upgrades</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="h3" data-i18n="about_card2_title">How we work</h3>
+            <div class="steps">
+              <div class="step">
+                <div class="step__n">01</div>
+                <div class="step__c">
+                  <div class="step__t" data-i18n="step_1_t">Brief → structure</div>
+                  <div class="step__d" data-i18n="step_1_d">We clarify goals, pages, and required functionality.</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">02</div>
+                <div class="step__c">
+                  <div class="step__t" data-i18n="step_2_t">Prototype → design</div>
+                  <div class="step__d" data-i18n="step_2_d">Clickable draft first, then strict visual system.</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">03</div>
+                <div class="step__c">
+                  <div class="step__t" data-i18n="step_3_t">Build → launch</div>
+                  <div class="step__d" data-i18n="step_3_d">Development, QA, deployment, and handover.</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">04</div>
+                <div class="step__c">
+                  <div class="step__t" data-i18n="step_4_t">Support → growth</div>
+                  <div class="step__d" data-i18n="step_4_d">Updates, content, SEO, and performance monitoring.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="logos" aria-label="Tech stack">
+          <div class="logo" title="HTML">HTML</div>
+          <div class="logo" title="CSS">CSS</div>
+          <div class="logo" title="JavaScript / TypeScript">JS/TS</div>
+          <div class="logo" title="Next.js / React (optional)">React</div>
+          <div class="logo" title="Node.js (optional)">Node</div>
+          <div class="logo" title="SEO">SEO</div>
+          <div class="logo" title="Analytics">Analytics</div>
+          <div class="logo" title="Security">Security</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="services_title">Services</h2>
+          <p class="sub" data-i18n="services_sub">
+            Choose a clear scope, get a clear delivery. No “magic” — just engineering and measurable outcomes.
+          </p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card card--mini">
+            <div class="icon">⚙️</div>
+            <h3 class="h3 h3--mini" data-i18n="svc_1_t">Custom development</h3>
+            <p class="p" data-i18n="svc_1_d">From strict business sites to complex dashboards and portals.</p>
+          </article>
+          <article class="card card--mini">
+            <div class="icon">🛒</div>
+            <h3 class="h3 h3--mini" data-i18n="svc_2_t">E-commerce</h3>
+            <p class="p" data-i18n="svc_2_d">Catalog, payments, delivery rules, CRM, and product SEO.</p>
+          </article>
+          <article class="card card--mini">
+            <div class="icon">🔎</div>
+            <h3 class="h3 h3--mini" data-i18n="svc_3_t">SEO & performance</h3>
+            <p class="p" data-i18n="svc_3_d">Core Web Vitals, structured data, and technical SEO.</p>
+          </article>
+          <article class="card card--mini">
+            <div class="icon">🛟</div>
+            <h3 class="h3 h3--mini" data-i18n="svc_4_t">Support & maintenance</h3>
+            <p class="p" data-i18n="svc_4_d">Monthly updates, backups, monitoring, and fixes.</p>
+          </article>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3 class="h3" data-i18n="svc_5_t">Functional blocks</h3>
+            <ul class="list">
+              <li data-i18n="svc_5_b1">Multilingual content (EN/PL/UA)</li>
+              <li data-i18n="svc_5_b2">Forms + email integrations</li>
+              <li data-i18n="svc_5_b3">Blog / news / CMS-ready structure</li>
+              <li data-i18n="svc_5_b4">Booking, payments, and subscriptions</li>
+              <li data-i18n="svc_5_b5">GDPR-friendly contact workflows</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="h3" data-i18n="svc_6_t">Quality checklist</h3>
+            <ul class="list">
+              <li data-i18n="svc_6_b1">Responsive on mobile / tablet / desktop</li>
+              <li data-i18n="svc_6_b2">Semantic HTML + basic accessibility</li>
+              <li data-i18n="svc_6_b3">Optimized assets & caching hints</li>
+              <li data-i18n="svc_6_b4">Security headers recommendations</li>
+              <li data-i18n="svc_6_b5">Clean code & handover notes</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="h3" data-i18n="svc_7_t">Optional add-ons</h3>
+            <ul class="list">
+              <li data-i18n="svc_7_b1">Brand identity & logo refresh</li>
+              <li data-i18n="svc_7_b2">Copywriting (EN/PL/UA)</li>
+              <li data-i18n="svc_7_b3">Google Business Profile & local SEO</li>
+              <li data-i18n="svc_7_b4">Ads landing pages & analytics funnels</li>
+              <li data-i18n="svc_7_b5">Security hardening & pentest guidance</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="work_title">Selected work</h2>
+          <p class="sub" data-i18n="work_sub">
+            Placeholders for your portfolio. Replace these cards with real projects later — design stays strict and clean.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="work">
+            <div class="work__top">
+              <div class="work__badge" data-i18n="work_a_tag">Business</div>
+              <div class="work__title" data-i18n="work_a_t">Corporate website</div>
+              <div class="work__desc" data-i18n="work_a_d">Structured pages, strong typography, fast performance.</div>
+            </div>
+            <div class="work__bottom">
+              <span class="work__meta" data-i18n="work_a_m">UI • SEO • Analytics</span>
+              <button class="btn btn--tiny" type="button" data-open-modal="a" data-i18n="details">Details</button>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__top">
+              <div class="work__badge" data-i18n="work_b_tag">E-commerce</div>
+              <div class="work__title" data-i18n="work_b_t">Online store</div>
+              <div class="work__desc" data-i18n="work_b_d">Catalog, filters, checkout — ready for scale.</div>
+            </div>
+            <div class="work__bottom">
+              <span class="work__meta" data-i18n="work_b_m">Shop • CRM • Payments</span>
+              <button class="btn btn--tiny" type="button" data-open-modal="b" data-i18n="details">Details</button>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work__top">
+              <div class="work__badge" data-i18n="work_c_tag">Landing</div>
+              <div class="work__title" data-i18n="work_c_t">Conversion landing</div>
+              <div class="work__desc" data-i18n="work_c_d">Clear offer, A/B-ready structure, lead capture.</div>
+            </div>
+            <div class="work__bottom">
+              <span class="work__meta" data-i18n="work_c_m">CRO • Copy • Forms</span>
+              <button class="btn btn--tiny" type="button" data-open-modal="c" data-i18n="details">Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="pricing_title">Pricing models</h2>
+          <p class="sub" data-i18n="pricing_sub">
+            Transparent options. Final price depends on scope, pages, and integrations.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="price">
+            <div class="price__head">
+              <div class="price__name" data-i18n="p1_t">Starter</div>
+              <div class="price__val">€999+</div>
+              <div class="price__note" data-i18n="p1_n">For a strict business presence</div>
+            </div>
+            <ul class="list list--compact">
+              <li data-i18n="p1_b1">Up to 5 pages</li>
+              <li data-i18n="p1_b2">Multilingual (EN/PL/UA)</li>
+              <li data-i18n="p1_b3">Basic SEO setup</li>
+              <li data-i18n="p1_b4">Contact forms</li>
+            </ul>
+            <button class="btn btn--secondary btn--block" type="button" data-scroll-btn="#contact" data-i18n="choose">Choose</button>
+          </article>
+
+          <article class="price price--best">
+            <div class="price__ribbon" data-i18n="best">Best value</div>
+            <div class="price__head">
+              <div class="price__name" data-i18n="p2_t">Business</div>
+              <div class="price__val">€2490+</div>
+              <div class="price__note" data-i18n="p2_n">For teams that need features</div>
+            </div>
+            <ul class="list list--compact">
+              <li data-i18n="p2_b1">Up to 12 pages + blog</li>
+              <li data-i18n="p2_b2">Advanced UI components</li>
+              <li data-i18n="p2_b3">Analytics + events</li>
+              <li data-i18n="p2_b4">Performance targets</li>
+            </ul>
+            <button class="btn btn--primary btn--block" type="button" data-scroll-btn="#contact" data-i18n="choose">Choose</button>
+          </article>
+
+          <article class="price">
+            <div class="price__head">
+              <div class="price__name" data-i18n="p3_t">Custom</div>
+              <div class="price__val" data-i18n="p3_val">On request</div>
+              <div class="price__note" data-i18n="p3_n">Portals, systems, integrations</div>
+            </div>
+            <ul class="list list--compact">
+              <li data-i18n="p3_b1">E-commerce / portals</li>
+              <li data-i18n="p3_b2">CRM / ERP integrations</li>
+              <li data-i18n="p3_b3">Security hardening</li>
+              <li data-i18n="p3_b4">Long-term maintenance</li>
+            </ul>
+            <button class="btn btn--secondary btn--block" type="button" data-scroll-btn="#contact" data-i18n="choose">Choose</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="faq_title">FAQ</h2>
+          <p class="sub" data-i18n="faq_sub">Short answers. No poetry.</p>
+        </div>
+
+        <div class="accordion" id="faqAcc">
+          <details class="acc" open>
+            <summary class="acc__sum"><span data-i18n="q1">How fast can you deliver?</span><span class="acc__icon">+</span></summary>
+            <div class="acc__body" data-i18n="a1">
+              First clickable prototype in 48–96 hours for most projects. Full delivery depends on scope and client feedback speed.
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__sum"><span data-i18n="q2">Do you provide hosting?</span><span class="acc__icon">+</span></summary>
+            <div class="acc__body" data-i18n="a2">
+              We can set up hosting and deployment or work with your provider. We also offer monitoring and backups.
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__sum"><span data-i18n="q3">What about SEO?</span><span class="acc__icon">+</span></summary>
+            <div class="acc__body" data-i18n="a3">
+              Every build includes technical SEO basics (structure, metadata, performance). Ongoing SEO is available as a monthly service.
+            </div>
+          </details>
+          <details class="acc">
+            <summary class="acc__sum"><span data-i18n="q4">Can you upgrade an existing website?</span><span class="acc__icon">+</span></summary>
+            <div class="acc__body" data-i18n="a4">
+              Yes. We can redesign, refactor, improve performance, add new blocks, and migrate to a modern stack.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2" data-i18n="contact_title">Contact</h2>
+          <p class="sub" data-i18n="contact_sub">Send a request — we respond with a plan and estimate.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3 class="h3" data-i18n="contact_card_t">Direct channels</h3>
+            <div class="contacts">
+              <a class="contact" href="tel:+48734036953">
+                <span class="contact__k" data-i18n="phone">Phone</span>
+                <span class="contact__v">+48734036953</span>
+              </a>
+              <a class="contact" href="mailto:westwebinternational@gmail.com" id="mailLink">
+                <span class="contact__k">E-mail</span>
+                <span class="contact__v">westwebinternational@gmail.com</span>
+              </a>
+              <div class="contact">
+                <span class="contact__k" data-i18n="location">Location</span>
+                <span class="contact__v" data-i18n="location_v">Poland (Kielce) — worldwide delivery</span>
+              </div>
+              <div class="contact">
+                <span class="contact__k" data-i18n="hours">Hours</span>
+                <span class="contact__v" data-i18n="hours_v">Mon–Fri, 09:00–18:00 CET</span>
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="notice__t" data-i18n="notice_t"></div>
               <div class="notice__d" data-i18n="notice_d">
                 Forms in this demo show a success message locally. To make real email sending, connect a backend (e.g., Formspree, Make, or your own API).
               </div>

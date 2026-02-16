@@ -137,7 +137,7 @@ const COPY = {
     hours: "Hours",
     hours_v: "Mon–Fri, 09:00–18:00 CET",
     notice_t: "Demo note",
-    notice_d: "Forms in this demo show a success message locally. To make real email sending, connect a backend (e.g., Formspree, Make, or your own API).",
+    notice_d: "Forms can send real messages via Formspree. Paste your Formspree endpoint into app.js (FORM_ENDPOINT).",
     budget_pick: "Pick one…",
     sc_1: "Website",
     sc_2: "SEO",
@@ -281,6 +281,8 @@ const COPY = {
     location_v: "Polska (Kielce) — realizacje globalnie",
     hours: "Godziny",
     hours_v: "Pn–Pt, 09:00–18:00 CET",
+    notice_t: "Uwaga",
+    notice_d: "Formularze mogą wysyłać realne wiadomości przez Formspree. Wklej swój endpoint w app.js (FORM_ENDPOINT).",
     budget_pick: "Wybierz…",
     sc_1: "Strona",
     sc_2: "SEO",
@@ -425,7 +427,7 @@ const COPY = {
     hours: "Години",
     hours_v: "Пн–Пт, 09:00–18:00 CET",
     notice_t: "Примітка демо",
-    notice_d: "Форми в цьому демо показують успішне відправлення локально. Для реальної відправки підключіть бекенд (наприклад, Formspree, Make або власний API).",
+    notice_d: "Форми можуть надсилати реальні повідомлення через Formspree. Вставте свій endpoint у app.js (FORM_ENDPOINT).",
     budget_pick: "Оберіть…",
     sc_1: "Сайт",
     sc_2: "SEO",
@@ -441,6 +443,14 @@ const COPY = {
     toast_error: "Заповніть коректно обов’язкові поля."
   }
 };
+
+// =============================
+// Form sending (Formspree)
+// =============================
+// 1) Create a form at https://formspree.io and copy your endpoint URL.
+// 2) Paste it below (same endpoint can be used for both forms).
+// Example: "https://formspree.io/f/XXXXXXXX"
+const FORM_ENDPOINT = "";
 
 const state = { lang: DEFAULT_LANG };
 
@@ -557,10 +567,45 @@ function setupForms(){
         toast(COPY[state.lang].toast_error, "err");
         return;
       }
-      const data = serializeForm(form);
-      console.log("[WWI DEMO] submit:", {form: form.id, lang: state.lang, data});
-      form.reset();
-      toast(COPY[state.lang].toast_sent, "ok");
+      // If FORM_ENDPOINT is not configured, keep demo behavior and warn in console.
+      if(!FORM_ENDPOINT || !/^https:\/\/formspree\.io\/f\//.test(FORM_ENDPOINT)){
+        const data = serializeForm(form);
+        console.warn("[WWI] FORM_ENDPOINT is not set. Configure it in app.js to enable real sending.");
+        console.log("[WWI DEMO] submit:", {form: form.id, lang: state.lang, data});
+        form.reset();
+        toast(COPY[state.lang].toast_sent, "ok");
+        return;
+      }
+
+      // Real sending via Formspree
+      const fd = new FormData(form);
+      fd.append("_subject", `West Web International — ${form.id} (${state.lang.toUpperCase()})`);
+      fd.append("_source", window.location.href);
+      fd.append("_lang", state.lang);
+      fd.append("_form", form.id);
+
+      fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: fd,
+        headers: { "Accept": "application/json" }
+      }).then(async (res)=>{
+        if(res.ok){
+          form.reset();
+          toast(COPY[state.lang].toast_sent, "ok");
+          return;
+        }
+        // Try to read JSON error from Formspree
+        let errText = "";
+        try{
+          const j = await res.json();
+          errText = j?.errors?.map(e=>e.message).join("; ") || "";
+        }catch(_){/* ignore */}
+        console.error("[WWI] Formspree error", res.status, errText);
+        toast(COPY[state.lang].toast_error, "err");
+      }).catch((err)=>{
+        console.error("[WWI] Formspree network error", err);
+        toast(COPY[state.lang].toast_error, "err");
+      });
     });
   };
   const q = $("#quickForm"); if(q) bind(q);

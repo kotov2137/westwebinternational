@@ -450,7 +450,6 @@ const COPY = {
 // 1) Create a form at https://formspree.io and copy your endpoint URL.
 // 2) Paste it below (same endpoint can be used for both forms).
 // Example: "https://formspree.io/f/XXXXXXXX"
-const FORM_ENDPOINT = "";
 
 const state = { lang: DEFAULT_LANG };
 
